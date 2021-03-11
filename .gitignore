@@ -1,3 +1,8 @@
 .idea
-/jpa.iml
+*.iml
 target
+.mvn
+
+.settings
+.classpath
+.project
