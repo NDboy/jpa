@@ -1,4 +1,4 @@
-package jpa;
+package simplejpa;
 
 import org.flywaydb.core.Flyway;
 import org.mariadb.jdbc.MariaDbDataSource;
@@ -23,7 +23,7 @@ public class EmployeeMain {
             throw new IllegalStateException("Can not create data source", se);
         }
 
-        Flyway flyway = Flyway.configure()./*locations("/db/migration/covid").*/dataSource(dataSource).load();
+        Flyway flyway = Flyway.configure().locations("/db/migration/simplejpa").dataSource(dataSource).load();
         flyway.clean();
         flyway.migrate();
 

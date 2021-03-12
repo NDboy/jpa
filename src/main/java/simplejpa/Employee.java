@@ -1,6 +1,5 @@
-package jpa;
+package simplejpa;
 
-import net.bytebuddy.dynamic.loading.InjectionClassLoader;
 
 import javax.persistence.*;
 
