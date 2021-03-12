@@ -5,13 +5,13 @@
               http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
     <persistence-unit name="pu"
                       transaction-type="RESOURCE_LOCAL">
-        <class>basic.Activity</class>
+        <class>basic.Employee</class>
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.mariadb.jdbc.Driver"/>
-            <property name="javax.persistence.jdbc.user" value="activitytracker"/>
-            <property name="javax.persistence.jdbc.password" value="activitytracker"/>
+            <property name="javax.persistence.jdbc.user" value="employees"/>
+            <property name="javax.persistence.jdbc.password" value="employees"/>
             <property name="javax.persistence.jdbc.url"
-                      value="jdbc:mariadb://localhost:3306/activitytracker"/>
+                      value="jdbc:mariadb://localhost:3306/employees"/>
             <property name="hibernate.dialect"
                       value="org.hibernate.dialect.MariaDB10Dialect"/>
             <property name="hibernate.show_sql" value="true"/>
