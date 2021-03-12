@@ -47,8 +47,18 @@ public class ActivityTrackerDao {
         EntityManager em = factory.createEntityManager();
         em.getTransaction().begin();
         Activity activity = em.find(Activity.class, id);
+//        Activity activity = em.getReference(Activity.class, id);
         em.remove(activity);
         em.getTransaction().commit();
         em.close();
+    }
+
+    public Activity findActivityById(long id) {
+        EntityManager em = factory.createEntityManager();
+        em.getTransaction().begin();
+        Activity activity = em.find(Activity.class, id);
+        em.getTransaction().commit();
+        em.close();
+        return activity;
     }
 }
